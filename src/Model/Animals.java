@@ -63,6 +63,11 @@ public class Animals {
     public void setGender(String Gender) {
         this.Gender = Gender;
     }
+
+    @Override
+    public String toString() {
+        return "Animals{" + "Id=" + Id + ", Name=" + Name + ", Weight=" + Weight + ", Type=" + Type + ", Gender=" + Gender + '}';
+    }
     
     
 }
