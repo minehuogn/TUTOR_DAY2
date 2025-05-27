@@ -60,14 +60,5 @@ public class Animals {
         return Gender;
     }
 
-    public void setGender(String Gender) {
-        this.Gender = Gender;
-    }
-
-    @Override
-    public String toString() {
-        return "Animals{" + "Id=" + Id + ", Name=" + Name + ", Weight=" + Weight + ", Type=" + Type + ", Gender=" + Gender + '}';
-    }
-    
     
 }
