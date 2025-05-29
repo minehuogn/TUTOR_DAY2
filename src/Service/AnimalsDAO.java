@@ -75,5 +75,20 @@ public class AnimalsDAO {
             return null;
         }
     }
+    public ResultSet DeleteAnimal(float min,float max){
+        try {
+            Connection conn = DBConnection.connect();
+            String query = "";
+            PreparedStatement stmt = conn.prepareStatement("select * from Animals where Weight between ? and ?");
+            
+            stmt.setFloat(1, min);
+            stmt.setFloat(2, max);
+            return stmt.executeQuery();
+                    
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
 }
