@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.Objects;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -64,6 +66,40 @@ public class Animals {
     public String toString() {
         return "Animals{" + "Id=" + Id + ", Name=" + Name + ", Weight=" + Weight + ", Type=" + Type + ", Gender=" + Gender + '}';
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Animals other = (Animals) obj;
+        if (this.Id != other.Id) {
+            return false;
+        }
+        if (Float.floatToIntBits(this.Weight) != Float.floatToIntBits(other.Weight)) {
+            return false;
+        }
+        if (!Objects.equals(this.Name, other.Name)) {
+            return false;
+        }
+        if (!Objects.equals(this.Type, other.Type)) {
+            return false;
+        }
+        return Objects.equals(this.Gender, other.Gender);
+    }
+    
 
     
 }
