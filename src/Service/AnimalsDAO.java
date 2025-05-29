@@ -75,7 +75,11 @@ public class AnimalsDAO {
             return null;
         }
     }
+<<<<<<< HEAD
     public ResultSet XoaAnimal(float min,float max){
+=======
+    public ResultSet DeleteAnimal(float min,float max){
+>>>>>>> chuc-nang-xoa
         try {
             Connection conn = DBConnection.connect();
             String query = "";
@@ -90,6 +94,9 @@ public class AnimalsDAO {
             return null;
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> chuc-nang-xoa
 
 }
