@@ -60,5 +60,10 @@ public class Animals {
         return Gender;
     }
 
+    @Override
+    public String toString() {
+        return "Animals{" + "Id=" + Id + ", Name=" + Name + ", Weight=" + Weight + ", Type=" + Type + ", Gender=" + Gender + '}';
+    }
+
     
 }
